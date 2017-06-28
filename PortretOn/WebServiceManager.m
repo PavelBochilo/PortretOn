@@ -41,9 +41,13 @@
     
     NSLog(@"My token succesfully saved, here it is - %@", _myAccessToken);
     NSLog(@"My ID was saved -- %@", _mySessionID);
+    [self.loginVc pushToTabBarcontroller];
+
 }
 
-- (void) sendPOSTRequestWithCode: (NSString *) code {
+- (void) sendPOSTRequestWithCode: (NSString *) code fromVC: (UIViewController *) loginVc {
+    
+    self.loginVc = (LoginVCViewController*) loginVc;
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate: nil delegateQueue:nil];
     NSString *post = [NSString stringWithFormat:@"client_id=%@&client_secret=%@&grant_type=authorization_code&redirect_uri=%@&code=%@",INSTAGRAM_CLIENT_ID,INSTAGRAM_CLIENTSERCRET,INSTAGRAM_REDIRECT_URI,code];

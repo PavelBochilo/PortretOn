@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginVCViewController.h"
 
 @interface WebServiceManager : UIViewController <NSURLSessionDataDelegate, NSURLSessionDelegate>
 
@@ -16,8 +17,9 @@
 
 @property (strong, nonatomic) NSString *myAccessToken;
 @property (strong, nonatomic) NSString *mySessionID;
+@property (strong, nonatomic) LoginVCViewController *loginVc;
 
-- (void) sendPOSTRequestWithCode: (NSString *) code;
+- (void) sendPOSTRequestWithCode: (NSString *) code fromVC: (UIViewController *) loginVc;
 
 
 @end

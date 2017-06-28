@@ -17,10 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(notificationStartLoadingUserData)
-                                                 name:@"userNotification"
-                                               object:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,9 +46,7 @@
     
 }
 
-
-#pragma mark -
-#pragma mark delegate
+#pragma mark - delegate
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request
  navigationType:(UIWebViewNavigationType)navigationType
@@ -98,7 +93,7 @@
         {
             // extract and handle access token
             NSRange range = [urlString rangeOfString: @"code="];
-            [[WebServiceManager sharedInstance] sendPOSTRequestWithCode:[urlString substringFromIndex: range.location+range.length]];
+            [[WebServiceManager sharedInstance] sendPOSTRequestWithCode:[urlString substringFromIndex: range.location+range.length] fromVC: self];
             return NO;
             
         }
@@ -106,15 +101,9 @@
     return YES;
 }
 
-
-- (void)notificationStartLoadingUserData {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self performSelector:@selector(pushToTabBarcontroller) withObject:nil afterDelay:1];
-    });
-}
 - (void)pushToTabBarcontroller {
     dispatch_async(dispatch_get_main_queue(), ^{        
-    [self performSegueWithIdentifier:@"firstSeque" sender:nil];
+    [self performSegueWithIdentifier:@"showTabBar" sender:nil];
     });
 }
 
