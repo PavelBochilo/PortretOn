@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		4066E2F51F0388310059EFED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4066E2F41F0388310059EFED /* main.m */; };
 		4066E2F81F0388310059EFED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4066E2F71F0388310059EFED /* AppDelegate.m */; };
-		4066E2FB1F0388310059EFED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4066E2FA1F0388310059EFED /* ViewController.m */; };
 		4066E2FE1F0388310059EFED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4066E2FC1F0388310059EFED /* Main.storyboard */; };
 		4066E3001F0388310059EFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4066E2FF1F0388310059EFED /* Assets.xcassets */; };
 		4066E3031F0388310059EFED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4066E3011F0388310059EFED /* LaunchScreen.storyboard */; };
 		4066E30E1F0388310059EFED /* PortretOnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4066E30D1F0388310059EFED /* PortretOnTests.m */; };
 		4066E3191F0388320059EFED /* PortretOnUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4066E3181F0388320059EFED /* PortretOnUITests.m */; };
+		4066E32A1F03ADC50059EFED /* Defines.m in Sources */ = {isa = PBXBuildFile; fileRef = 4066E3291F03ADC50059EFED /* Defines.m */; };
+		4066E32D1F03B1CD0059EFED /* LoginVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4066E32C1F03B1CD0059EFED /* LoginVCViewController.m */; };
+		4066E3351F03C4570059EFED /* WebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4066E3341F03C4570059EFED /* WebServiceManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 		4066E2F41F0388310059EFED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4066E2F61F0388310059EFED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4066E2F71F0388310059EFED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4066E2F91F0388310059EFED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4066E2FA1F0388310059EFED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4066E2FD1F0388310059EFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4066E2FF1F0388310059EFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4066E3021F0388310059EFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,13 @@
 		4066E3141F0388320059EFED /* PortretOnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PortretOnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4066E3181F0388320059EFED /* PortretOnUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PortretOnUITests.m; sourceTree = "<group>"; };
 		4066E31A1F0388320059EFED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4066E3281F03ADC50059EFED /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		4066E3291F03ADC50059EFED /* Defines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Defines.m; sourceTree = "<group>"; };
+		4066E32B1F03B1CD0059EFED /* LoginVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVCViewController.h; sourceTree = "<group>"; };
+		4066E32C1F03B1CD0059EFED /* LoginVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVCViewController.m; sourceTree = "<group>"; };
+		4066E3311F03B2F30059EFED /* PH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PH.pch; sourceTree = "<group>"; };
+		4066E3331F03C4570059EFED /* WebServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceManager.h; sourceTree = "<group>"; };
+		4066E3341F03C4570059EFED /* WebServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +108,10 @@
 		4066E2F21F0388310059EFED /* PortretOn */ = {
 			isa = PBXGroup;
 			children = (
-				4066E2F61F0388310059EFED /* AppDelegate.h */,
-				4066E2F71F0388310059EFED /* AppDelegate.m */,
-				4066E2F91F0388310059EFED /* ViewController.h */,
-				4066E2FA1F0388310059EFED /* ViewController.m */,
+				4066E32E1F03B1E30059EFED /* VCModules */,
+				4066E3321F03C4340059EFED /* WebServiceManager */,
+				4066E3301F03B2010059EFED /* AppDelegate */,
+				4066E3271F03AD8C0059EFED /* URLSource */,
 				4066E2FC1F0388310059EFED /* Main.storyboard */,
 				4066E2FF1F0388310059EFED /* Assets.xcassets */,
 				4066E3011F0388310059EFED /* LaunchScreen.storyboard */,
@@ -118,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				4066E2F41F0388310059EFED /* main.m */,
+				4066E3311F03B2F30059EFED /* PH.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +146,50 @@
 				4066E31A1F0388320059EFED /* Info.plist */,
 			);
 			path = PortretOnUITests;
+			sourceTree = "<group>";
+		};
+		4066E3271F03AD8C0059EFED /* URLSource */ = {
+			isa = PBXGroup;
+			children = (
+				4066E3281F03ADC50059EFED /* Defines.h */,
+				4066E3291F03ADC50059EFED /* Defines.m */,
+			);
+			name = URLSource;
+			sourceTree = "<group>";
+		};
+		4066E32E1F03B1E30059EFED /* VCModules */ = {
+			isa = PBXGroup;
+			children = (
+				4066E32F1F03B1EE0059EFED /* LoginVC */,
+			);
+			name = VCModules;
+			sourceTree = "<group>";
+		};
+		4066E32F1F03B1EE0059EFED /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				4066E32B1F03B1CD0059EFED /* LoginVCViewController.h */,
+				4066E32C1F03B1CD0059EFED /* LoginVCViewController.m */,
+			);
+			name = LoginVC;
+			sourceTree = "<group>";
+		};
+		4066E3301F03B2010059EFED /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4066E2F61F0388310059EFED /* AppDelegate.h */,
+				4066E2F71F0388310059EFED /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4066E3321F03C4340059EFED /* WebServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				4066E3331F03C4570059EFED /* WebServiceManager.h */,
+				4066E3341F03C4570059EFED /* WebServiceManager.m */,
+			);
+			name = WebServiceManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4066E2FB1F0388310059EFED /* ViewController.m in Sources */,
+				4066E3351F03C4570059EFED /* WebServiceManager.m in Sources */,
 				4066E2F81F0388310059EFED /* AppDelegate.m in Sources */,
+				4066E32A1F03ADC50059EFED /* Defines.m in Sources */,
 				4066E2F51F0388310059EFED /* main.m in Sources */,
+				4066E32D1F03B1CD0059EFED /* LoginVCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +563,7 @@
 				4066E31F1F0388320059EFED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4066E3201F0388320059EFED /* Build configuration list for PBXNativeTarget "PortretOnTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +572,7 @@
 				4066E3221F0388320059EFED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4066E3231F0388320059EFED /* Build configuration list for PBXNativeTarget "PortretOnUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +581,7 @@
 				4066E3251F0388320059EFED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
