@@ -17,6 +17,11 @@
 		4066E32A1F03ADC50059EFED /* Defines.m in Sources */ = {isa = PBXBuildFile; fileRef = 4066E3291F03ADC50059EFED /* Defines.m */; };
 		4066E32D1F03B1CD0059EFED /* LoginVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4066E32C1F03B1CD0059EFED /* LoginVCViewController.m */; };
 		4066E3351F03C4570059EFED /* WebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4066E3341F03C4570059EFED /* WebServiceManager.m */; };
+		4066E33A1F05213A0059EFED /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4066E3391F05213A0059EFED /* HomeVC.m */; };
+		4066E33E1F063C880059EFED /* HomeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4066E33D1F063C880059EFED /* HomeTableCell.m */; };
+		4066E3401F063E610059EFED /* HomeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4066E33F1F063E610059EFED /* HomeTableCell.xib */; };
+		4083B51A1F0BB69F00BCB333 /* KeyChainWrapper+PrivateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 4083B5191F0BB69F00BCB333 /* KeyChainWrapper+PrivateMethods.m */; };
+		4083B51D1F0BC07600BCB333 /* UrlCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = 4083B51C1F0BC07600BCB333 /* UrlCredential.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,16 @@
 		4066E3311F03B2F30059EFED /* PH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PH.pch; sourceTree = "<group>"; };
 		4066E3331F03C4570059EFED /* WebServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceManager.h; sourceTree = "<group>"; };
 		4066E3341F03C4570059EFED /* WebServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceManager.m; sourceTree = "<group>"; };
+		4066E3381F05213A0059EFED /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		4066E3391F05213A0059EFED /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		4066E33C1F063C880059EFED /* HomeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableCell.h; sourceTree = "<group>"; };
+		4066E33D1F063C880059EFED /* HomeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableCell.m; sourceTree = "<group>"; };
+		4066E33F1F063E610059EFED /* HomeTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableCell.xib; sourceTree = "<group>"; };
+		4083B50E1F0BB4EB00BCB333 /* KeyChainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainWrapper.h; sourceTree = "<group>"; };
+		4083B5181F0BB69F00BCB333 /* KeyChainWrapper+PrivateMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KeyChainWrapper+PrivateMethods.h"; sourceTree = "<group>"; };
+		4083B5191F0BB69F00BCB333 /* KeyChainWrapper+PrivateMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KeyChainWrapper+PrivateMethods.m"; sourceTree = "<group>"; };
+		4083B51B1F0BC07600BCB333 /* UrlCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlCredential.h; sourceTree = "<group>"; };
+		4083B51C1F0BC07600BCB333 /* UrlCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlCredential.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +123,8 @@
 		4066E2F21F0388310059EFED /* PortretOn */ = {
 			isa = PBXGroup;
 			children = (
+				4083B50C1F0BB48700BCB333 /* Memento */,
+				4066E33B1F063C3D0059EFED /* CellXibModels */,
 				4066E32E1F03B1E30059EFED /* VCModules */,
 				4066E3321F03C4340059EFED /* WebServiceManager */,
 				4066E3301F03B2010059EFED /* AppDelegate */,
@@ -160,6 +177,7 @@
 		4066E32E1F03B1E30059EFED /* VCModules */ = {
 			isa = PBXGroup;
 			children = (
+				4066E3371F05209C0059EFED /* HomeVC */,
 				4066E32F1F03B1EE0059EFED /* LoginVC */,
 			);
 			name = VCModules;
@@ -190,6 +208,37 @@
 				4066E3341F03C4570059EFED /* WebServiceManager.m */,
 			);
 			name = WebServiceManager;
+			sourceTree = "<group>";
+		};
+		4066E3371F05209C0059EFED /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				4066E3381F05213A0059EFED /* HomeVC.h */,
+				4066E3391F05213A0059EFED /* HomeVC.m */,
+			);
+			name = HomeVC;
+			sourceTree = "<group>";
+		};
+		4066E33B1F063C3D0059EFED /* CellXibModels */ = {
+			isa = PBXGroup;
+			children = (
+				4066E33C1F063C880059EFED /* HomeTableCell.h */,
+				4066E33D1F063C880059EFED /* HomeTableCell.m */,
+				4066E33F1F063E610059EFED /* HomeTableCell.xib */,
+			);
+			name = CellXibModels;
+			sourceTree = "<group>";
+		};
+		4083B50C1F0BB48700BCB333 /* Memento */ = {
+			isa = PBXGroup;
+			children = (
+				4083B50E1F0BB4EB00BCB333 /* KeyChainWrapper.h */,
+				4083B5181F0BB69F00BCB333 /* KeyChainWrapper+PrivateMethods.h */,
+				4083B5191F0BB69F00BCB333 /* KeyChainWrapper+PrivateMethods.m */,
+				4083B51B1F0BC07600BCB333 /* UrlCredential.h */,
+				4083B51C1F0BC07600BCB333 /* UrlCredential.m */,
+			);
+			name = Memento;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +350,7 @@
 				4066E3031F0388310059EFED /* LaunchScreen.storyboard in Resources */,
 				4066E3001F0388310059EFED /* Assets.xcassets in Resources */,
 				4066E2FE1F0388310059EFED /* Main.storyboard in Resources */,
+				4066E3401F063E610059EFED /* HomeTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,10 +376,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4066E3351F03C4570059EFED /* WebServiceManager.m in Sources */,
+				4083B51D1F0BC07600BCB333 /* UrlCredential.m in Sources */,
 				4066E2F81F0388310059EFED /* AppDelegate.m in Sources */,
 				4066E32A1F03ADC50059EFED /* Defines.m in Sources */,
+				4066E33A1F05213A0059EFED /* HomeVC.m in Sources */,
+				4083B51A1F0BB69F00BCB333 /* KeyChainWrapper+PrivateMethods.m in Sources */,
 				4066E2F51F0388310059EFED /* main.m in Sources */,
 				4066E32D1F03B1CD0059EFED /* LoginVCViewController.m in Sources */,
+				4066E33E1F063C880059EFED /* HomeTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +534,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PortretOn/PH.pch;
 				INFOPLIST_FILE = PortretOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.epam.test.PortretOn;
@@ -491,6 +547,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PortretOn/PH.pch;
 				INFOPLIST_FILE = PortretOn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.epam.test.PortretOn;
