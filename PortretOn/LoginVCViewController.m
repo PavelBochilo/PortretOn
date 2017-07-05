@@ -9,6 +9,7 @@
 #import "LoginVCViewController.h"
 #import "WebServiceManager.h"
 
+
 @interface LoginVCViewController ()
 
 @end
@@ -17,14 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(notificationStartLoadingUserData)
-                                                 name:@"userNotification"
-                                               object:nil];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+   
+    
 }
 
 
@@ -43,15 +44,13 @@
                INSTAGRAM_CLIENT_ID,
                INSTAGRAM_REDIRECT_URI,
                INSTAGRAM_SCOPE];
-
+    _stage = NO;
     [loginWebView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString: authURL]]];
     [loginWebView setDelegate:self];
     
 }
 
-
-#pragma mark -
-#pragma mark delegate
+#pragma mark - delegate
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request
  navigationType:(UIWebViewNavigationType)navigationType
@@ -62,7 +61,7 @@
 - (void) webViewDidStartLoad:(UIWebView *)webView
 {
     
-    [loginIndicator startAnimating];
+    [self loginIndicatorAnimating:YES];
     [loginWebView.layer removeAllAnimations];
     loginWebView.userInteractionEnabled = NO;
     [UIView animateWithDuration: 0.1 animations:^{
@@ -72,13 +71,25 @@
 
 - (void) webViewDidFinishLoad:(UIWebView *)webView
 {
+    [self loginIndicatorAnimating:NO];
     [loginWebView.layer removeAllAnimations];
     loginWebView.userInteractionEnabled = YES;
     [UIView animateWithDuration: 0.1 animations:^{
         loginWebView.alpha = 1.0;
     }];
-    [loginIndicator stopAnimating];
-    loginIndicator.hidden = YES;
+}
+
+- (void)loginIndicatorAnimating: (BOOL)isOn {
+    if (_stage == YES) {
+        return;
+    }
+    if (isOn == YES) {
+        [loginIndicator startAnimating];
+        loginIndicator.hidden = NO;
+    } else {
+         [loginIndicator stopAnimating];
+        loginIndicator.hidden = YES;
+    }
 }
 
 - (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
@@ -98,23 +109,22 @@
         {
             // extract and handle access token
             NSRange range = [urlString rangeOfString: @"code="];
-            [[WebServiceManager sharedInstance] sendPOSTRequestWithCode:[urlString substringFromIndex: range.location+range.length]];
+            [self loginIndicatorAnimating:YES];
+            _stage = YES;
+            [loginWebView removeFromSuperview];
+            [[WebServiceManager sharedInstance]
+             sendPOSTRequestWithCode:[urlString substringFromIndex: range.location+range.length] fromVC: self];
             return NO;
-            
-        }
-    
+        }    
     return YES;
 }
 
-
-- (void)notificationStartLoadingUserData {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self performSelector:@selector(pushToTabBarcontroller) withObject:nil afterDelay:1];
-    });
-}
 - (void)pushToTabBarcontroller {
-    dispatch_async(dispatch_get_main_queue(), ^{        
-    [self performSegueWithIdentifier:@"firstSeque" sender:nil];
+    NSLog(@"Push to Home Screen");
+    dispatch_async(dispatch_get_main_queue(), ^{
+    _stage = NO;
+    [self loginIndicatorAnimating:NO];
+    [self performSegueWithIdentifier:@"showTabBar" sender:nil];
     });
 }
 
