@@ -16,6 +16,7 @@
 }
 
 @property (strong,nonatomic) NSString *typeOfAuthentication;
+@property (nonatomic) BOOL stage; 
 - (void) pushToTabBarcontroller;
 
 @end
