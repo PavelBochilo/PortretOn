@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="83w-UA-u7B" customClass="MainCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="279"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="279"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eQl-rz-MUL">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="279"/>
+                    </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dh5-cf-rBp">
+                        <rect key="frame" x="122" y="121" width="37" height="37"/>
+                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="eQl-rz-MUL" firstAttribute="leading" secondItem="83w-UA-u7B" secondAttribute="leading" id="Dvh-iz-tVA"/>
+                <constraint firstAttribute="bottom" secondItem="eQl-rz-MUL" secondAttribute="bottom" id="EdW-LV-Xeg"/>
+                <constraint firstItem="dh5-cf-rBp" firstAttribute="centerY" secondItem="83w-UA-u7B" secondAttribute="centerY" id="MCD-lW-sbK"/>
+                <constraint firstAttribute="trailing" secondItem="eQl-rz-MUL" secondAttribute="trailing" id="enf-dp-tua"/>
+                <constraint firstItem="eQl-rz-MUL" firstAttribute="top" secondItem="83w-UA-u7B" secondAttribute="top" id="szJ-KG-0ji"/>
+                <constraint firstItem="dh5-cf-rBp" firstAttribute="centerX" secondItem="83w-UA-u7B" secondAttribute="centerX" id="z3y-Ij-v6d"/>
+            </constraints>
+            <size key="customSize" width="280" height="279"/>
+            <connections>
+                <outlet property="indicator" destination="dh5-cf-rBp" id="FM1-yE-5uU"/>
+                <outlet property="photoColCell" destination="eQl-rz-MUL" id="Hjr-ae-jfs"/>
+            </connections>
+            <point key="canvasLocation" x="-29" y="-32.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
